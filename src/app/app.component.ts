@@ -7,55 +7,42 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  public sliderItemsMen: Array<{name: string, price: number}> = [
+  constructor() {}
+//Men DataBase
+  public sliderItemsMen: Array<{name: string, price: number,tempImage? : any}> = [
+    // Design
     {
       name: 'T-shirt',
       price : 5,
+      tempImage : '../assets/t-shirt.png'
     },
     {
       name: 'Pants Forclaz',
       price : 30,
+      tempImage : '../assets/Pants.png'
     },
     {
       name: 'Backpack',
       price : 60,
+      tempImage : '../assets/Backpack.png'
+    },
+    //lorem
+    {
+      name: 'Trainers',
+      price : 50,
+      tempImage : '../assets/Pants.png'
     },
     {
       name: 'Trainers',
       price : 50,
-    },
-    {
-      name: 'Shirt',
-      price: 10,
-    },
-    {
-      name: 'T-shirt',
-      price : 5,
-    },
-    {
-      name: 'Pants Forclaz',
-      price : 30,
-    },
-    {
-      name: 'Backpack',
-      price : 60,
+      tempImage : '../assets/Pants.png'
     },
     {
       name: 'Trainers',
       price : 50,
-    },
-    {
-      name: 'Shirt',
-      price: 10,
+      tempImage : '../assets/Pants.png'
     }
   ];
-
-  public sliderItemsWomen: Array<{name: string, price: number}> = [
-    
-  ]
-
-
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
 
   moveLeft() {
@@ -65,9 +52,43 @@ export class AppComponent {
   moveRight() {
     this.ds.moveRight();
   }
-  constructor() {
-  }
 
   ngOnInit() {
   }
+//Women DataBase
+  public sliderItemsWomen: Array<{name: string, price: number,tempImage? : any}> = [
+    // Design
+    {
+    name: 'Jacket',
+    price : 60,
+    tempImage : '../assets/Jacket.png'
+  },
+  {
+    name: 'Trekking shoes',
+    price : 30,
+    tempImage : '../assets/Shoes.png'
+  },
+  {
+    name: 'T-shirt',
+    price : 60,
+    tempImage : '../assets/T-shirts-women.png'
+  },
+  // lorem
+  {
+    name: 'Trainers',
+    price : 50,
+    tempImage : '../assets/Pants.png'
+  },
+  {
+    name: 'Trainers',
+    price : 50,
+    tempImage : '../assets/Pants.png'
+  },
+  {
+    name: 'Trainers',
+    price : 50,
+    tempImage : '../assets/Pants.png'
+  }
+];
+
 }

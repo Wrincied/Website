@@ -38,8 +38,6 @@ body{
         justify-content: space-between;
         align-items: center;
         padding: 20px 15px;
-
-
         nav{
 
             font-size: 18px;
@@ -160,6 +158,20 @@ body{
 .catalog{
   padding:30px 0;
   margin: 0 100px;
+  .items-btn{
+    padding-bottom:30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    vertical-align: middle;
+    button{
+      padding: 10px 10px;
+      background-color:#ffffff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
   .header{
     display: flex;
     align-items: center;
@@ -187,6 +199,7 @@ body{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
+        
         padding:30px 0;     
         p{
           padding: 0;
@@ -236,27 +249,39 @@ body{
 
       }
     }
-// .about{
-//     background-color: #aa9b77;
-//     width: 100%;
-//     height: 402px;
-// .about-div{
-//     background-color: #aa9b77;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
+.about{
+    background-color: #aa9b77;
+    width: 100%;
+    min-height: 402px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    vertical-align: middle;
 
-//     text-align: center;
-//     .title{
-//         p{
-//             font-family: 'Quicksand Bold';
-//         }
-//     }
-//         .text{
-//             p{
-//             font-family: 'Quicksand Bold';
-//             }
-//         }
-//     }
-// }
+    text-align: center;
+.about-div{
+    background-color: #aa9b77;
+    max-width: 469px;
+    text-align: center;
+    .title{
+        p{
+          text-transform: uppercase;
+          color: #837659;  
+          font-size: 20px;
+          font-family: 'Quicksand Bold';
+          font-weight: 400;
+        }
+    }
+        .text{
+            p{
+              line-height: 24px;
+              color: #424242;
+              font-family: 'Quicksand Bold';
+              font-weight: 400;
+            }
+        }
+    }
+}

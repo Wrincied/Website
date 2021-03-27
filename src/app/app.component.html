@@ -58,8 +58,8 @@
       <p>men</p>
   </div>
       <div class="items-btn">
-        <button (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
         <button (click)="moveRight()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
+        <button (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
       </div>
 
 
@@ -71,7 +71,7 @@
             <div class="color">color</div>
           </div>
           
-          <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
+          <div class="img"><img src="{{item.tempImage}}" alt="photo"></div>
 
           <div class="bottom">
             <div class="name">{{ item.name }}</div>
@@ -81,24 +81,34 @@
       </drag-scroll>
     </div>
 
-
-
-
-
-
-
-
-
           <div class="catalog-reverse">
             <div class="header-reverse">
               <p>women<p>
             </div>
           </div>
-          <div class="items-btn">
+          <!-- <div class="items-btn">
             <button (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
             <button (click)="moveRight()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
+          </div> -->
+          <div class="items">
+            <drag-scroll #nav>
+              <div class="item" *ngFor="let item of sliderItemsWomen" drag-scroll-item >
+                <div class="top">
+                  <div class="size">size</div>
+                  <div class="color">color</div>
+                </div>
+                
+                <div class="img"><img src="{{item.tempImage}}" alt="photo"></div>
+      
+                <div class="bottom">
+                  <div class="name">{{ item.name }}</div>
+                  <div class="price">{{ item.price | currency:"EUR" }}</div>
+                </div>
+              </div>
+            </drag-scroll>
           </div>
-    <!-- <div class="about">
+        </div>
+    <div class="about">
         <div class="about-div">
             <div class="title">
                 <p>about us</p>
@@ -110,11 +120,13 @@
                   </p>
               </div>
                 </div>
-        </div> -->
 
-<!--
+
+
   <footer>
-
+    <div class="footer">
+      
+    </div>
   </footer>
-   -->
+  
 </div>

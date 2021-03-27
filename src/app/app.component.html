@@ -55,39 +55,49 @@
 
   <div class="catalog container">
     <div class="header">
-      <div class="header-text">men</div>
-    </div>
-      <!-- <div class="items-btn">
-        <button (click)="moveLeft()">Left</button>
-        <button (click)="moveRight()">Right</button>
-      </div> -->
+      <p>men</p>
+  </div>
+      <div class="items-btn">
+        <button (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
+        <button (click)="moveRight()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
+      </div>
 
 
     <div class="items">
-      <drag-scroll [scrollbar-hidden]="true">
-        <div drag-scroll-item *ngFor="let item of sliderItems">
-          <div  class="item">
-            <div class="top">
-              <div class="size">size</div>
-              <div class="color">color</div>
-            </div>
-            <div class="img">
-              <img src="../assets/item1.png" alt="">
-            </div>
-            <div class="bottom">
-              <div class="name">{{ item.name }}</div>
-              <div class="price">{{ item.price | currency:'EUR' }}</div>
-            </div>
+      <drag-scroll #nav>
+        <div class="item" *ngFor="let item of sliderItemsMen" drag-scroll-item >
+          <div class="top">
+            <div class="size">size</div>
+            <div class="color">color</div>
+          </div>
+          
+          <div class="img"><img src="../assets/t-shirt.png" alt="photo"></div>
+
+          <div class="bottom">
+            <div class="name">{{ item.name }}</div>
+            <div class="price">{{ item.price | currency:"EUR" }}</div>
           </div>
         </div>
       </drag-scroll>
     </div>
-    <div class="catalog-reverse">
-      <div class="header-reverse">
-        <div class="header-text">women</div>
-      </div>
-  </div>
 
+
+
+
+
+
+
+
+
+          <div class="catalog-reverse">
+            <div class="header-reverse">
+              <p>women<p>
+            </div>
+          </div>
+          <div class="items-btn">
+            <button (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
+            <button (click)="moveRight()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
+          </div>
     <!-- <div class="about">
         <div class="about-div">
             <div class="title">

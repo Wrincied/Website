@@ -172,6 +172,20 @@ body{
       outline: none;
     }
   }
+  .items-btn-rev{
+    padding-bottom:70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+  button{
+    padding: 0px 10px;
+    background-color:#ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  }
   .header{
     display: flex;
     align-items: center;
@@ -191,7 +205,7 @@ body{
       }
 
       }
-    }
+
     .catalog-reverse{
       background-color: white;
       padding:30px 0;
@@ -199,8 +213,7 @@ body{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        
-        padding:30px 0;     
+        padding:30px 0;
         p{
           padding: 0;
           font-size: 20px;
@@ -215,11 +228,11 @@ body{
             background-color: #cccccc;
             display: block;
           }
-    
+
         }
     }
     .items{
-      display: flex;  
+      display: flex;
       .item{
         min-width: 320px;
         height: 100%;
@@ -231,7 +244,7 @@ body{
         font-weight: 400;
         font-family: 'Quicksand Bold';
         margin: 0 25px 0 0;
-        
+
         &:hover{
           border: 6px solid #aa9b77;
         }
@@ -243,12 +256,27 @@ body{
         .name{
           color:#aa9b77;
         }
-        .img{
-          text-align: center;
+        .img-container{
+          padding: 0 20px;
+          height: 270px;
+          display: flex;
+          align-items: center;
+          img{
+            display: block;
+            height: auto;
+            margin:auto;
+            max-width:100%;
+            max-height: 100%;
+
+          }
+
+
         }
 
       }
     }
+
+}
 .about{
     background-color: #aa9b77;
     width: 100%;
@@ -263,11 +291,13 @@ body{
     background-color: #aa9b77;
     max-width: 469px;
     text-align: center;
+
     .title{
       padding-bottom: 80px;
         p{
+
           text-transform: uppercase;
-          color: #837659;  
+          color: #837659;
           font-size: 20px;
           font-family: 'Quicksand Bold';
           font-weight: 400;
@@ -291,7 +321,7 @@ footer{
   background-color: #535253;
   .footer{
     margin-left: 64px;
-    display: flex;  
+    display: flex;
     background-color: #535253;
     align-items: center;
     padding: 20px;
@@ -327,9 +357,9 @@ footer{
             a{
               text-decoration: none;
               color: #ffffff;
-              font-family: "Quicksand Bold"; 
-              font-weight: 400;          
-              line-height: 28px; 
+              font-family: "Quicksand Bold";
+              font-weight: 400;
+              line-height: 28px;
               font-size: 14px;
             &:hover{
               text-decoration: underline;

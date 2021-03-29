@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 
 import { DragScrollModule  } from 'ngx-drag-scroll';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DragScrollModule 
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
@@ -7,14 +7,12 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {}
-//Men DataBase
-  public sliderItemsMen: Array<{name: string, price: number,tempImage? : any}> = [
-    // Design
+  sliderItemsMen: Array<{name: string, price: number,tempImage? : any}> = [
+
     {
       name: 'T-shirt',
       price : 5,
-      tempImage : '../assets/Pants.png'
+      tempImage : '../assets/t-shirt.png'
     },
     {
       name: 'Pants Forclaz',
@@ -24,7 +22,7 @@ export class AppComponent {
     {
       name: 'Backpack',
       price : 60,
-      tempImage : '../assets/Pants.png'
+      tempImage : '../assets/Backpack.png'
     },
     //lorem
     {
@@ -35,7 +33,7 @@ export class AppComponent {
     {
       name: 'Trainers',
       price : 50,
-      tempImage : '../assets/Pants.png'
+      tempImage : '../assets/Shoes.png'
     },
     {
       name: 'Trainers',
@@ -43,17 +41,27 @@ export class AppComponent {
       tempImage : '../assets/Pants.png'
     }
   ];
-  @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
+  @ViewChild('navMen', { read: DragScrollComponent }) dsMen!: DragScrollComponent;
 
   moveLeft() {
-    this.ds.moveLeft();
+    this.dsMen.moveLeft();
   }
 
   moveRight() {
-    this.ds.moveRight();
+    this.dsMen.moveRight();
   }
 
   ngOnInit() {
+
+  }
+
+
+  @ViewChild('navWomen',{ read : DragScrollComponent}) dsWomen!: DragScrollComponent;
+  moveLeftRev() {
+    this.dsWomen.moveLeft();
+  }
+  moveRightRev() {
+    this.dsWomen.moveRight();
   }
 //Women DataBase
   public sliderItemsWomen: Array<{name: string, price: number,tempImage? : any}> = [
@@ -61,17 +69,17 @@ export class AppComponent {
     {
     name: 'Jacket',
     price : 60,
-    tempImage : '../assets/Pants.png'
+    tempImage : '../assets/t-shirt.png'
   },
   {
     name: 'Trekking shoes',
     price : 30,
-    tempImage : '../assets/Pants.png'
+    tempImage : '../assets/Jacket.png'
   },
   {
     name: 'T-shirt',
     price : 60,
-    tempImage : '../assets/Pants.png'
+    tempImage : '../assets/Shoes.png'
   },
   // lorem
   {
@@ -91,3 +99,4 @@ export class AppComponent {
   }
 ];
 }
+

@@ -14,7 +14,7 @@ export class AppComponent {
     {
       name: 'T-shirt',
       price : 5,
-      tempImage : '../assets/t-shirt.png'
+      tempImage : '../assets/Pants.png'
     },
     {
       name: 'Pants Forclaz',
@@ -24,13 +24,13 @@ export class AppComponent {
     {
       name: 'Backpack',
       price : 60,
-      tempImage : '../assets/Backpack.png'
+      tempImage : '../assets/Pants.png'
     },
     //lorem
     {
       name: 'Trainers',
       price : 50,
-      tempImage : '../assets/Pants.png'
+      tempImage : '../assets/Jacket.png'
     },
     {
       name: 'Trainers',
@@ -61,17 +61,17 @@ export class AppComponent {
     {
     name: 'Jacket',
     price : 60,
-    tempImage : '../assets/Jacket.png'
+    tempImage : '../assets/Pants.png'
   },
   {
     name: 'Trekking shoes',
     price : 30,
-    tempImage : '../assets/Shoes.png'
+    tempImage : '../assets/Pants.png'
   },
   {
     name: 'T-shirt',
     price : 60,
-    tempImage : '../assets/T-shirts-women.png'
+    tempImage : '../assets/Pants.png'
   },
   // lorem
   {
@@ -90,5 +90,4 @@ export class AppComponent {
     tempImage : '../assets/Pants.png'
   }
 ];
-
 }

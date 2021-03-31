@@ -1,12 +1,23 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
-
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(
+    private viewportScroller: ViewportScroller,
+  ) {}
+
+  toTop() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
+
+
+
   sliderItemsMen: Array<{name: string, price: number,tempImage? : any}> = [
 
     {
@@ -99,4 +110,3 @@ export class AppComponent {
   }
 ];
 }
-

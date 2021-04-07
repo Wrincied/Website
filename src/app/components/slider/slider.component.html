@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="header-text">{{ header }}</div>
+</div>
+
+<div class="items-btn">
+  <div class="item-btn">
+    <button (click)="moveLeft()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
+    <button (click)="moveRight()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
+  </div>
+  <div class="items">
+
+    <drag-scroll #nav>
+      <div class="drag-item" drag-scroll-item *ngFor="let item of slider">
+        <div class="item">
+          <a [routerLink]="['details', item.id]" >
+            <div class="top">
+              <div class="size">size</div>
+              <div class="color">color</div>
+            </div>
+            <div class="img-container">
+              <img src="{{item.tempImage}}" alt="">
+            </div>
+            <div class="bottom">
+              <div class="name">{{ item.name }}</div>
+              <div class="price">{{ item.price | currency:'EUR' }}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </drag-scroll>
+  </div>
+

@@ -13,22 +13,24 @@
 <div class="filter" id="scroll" >
   <div class="filter-check">
       <div class="filter-form">
-          <input type="checkbox" id="checkbox1"  checked="checked">
-          <label for="">Men</label>
+        <label>
+          <input [(ngModel)]="isManVisible" type="checkbox" name="Men">
+          Men
+        </label>
       </div>
       <div class="filter-form">
-          <input type="checkbox" id="checkbox2" checked="checked" >
-          <label for="">Women</label>
+        <label>
+          <input [(ngModel)]="isManVisible" type="checkbox" name="Men">
+          Women
+        </label>
       </div>
       <div class="filter-form">
-          <input type="checkbox" name="" id="checkbox" >
-          <label for="">Children</label>
       </div>
 
   </div>
 
   <div class="filter-submit">
-      <button>
+      <button (click)="seeAllProduct()">
           see all products
       </button>
 
@@ -36,64 +38,10 @@
 
 </div>
 
-<div class="catalog container">
-<div class="header">
-  <p>men</p>
+<div class="catalog ">
+  <app-slider *ngIf="isManVisible" [header]="'Men(' + menSlider.length + ')'" [slider]="menSlider"></app-slider>
+  <app-slider *ngIf="isWomenVisible" [header]="'Women(' + womenSlider.length + ')'" [slider]="womenSlider"></app-slider>
 </div>
-<div class="items-btn">
-<button  (click)="moveRight()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
-<button  (click)="moveLeft()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
-</div>
-
-
-<div class="items">
-
-  <drag-scroll #navMen>
-    <div class="item" *ngFor="let item of sliderItemsMen" drag-scroll-item>
-      <div class="top">
-        <div class="size">size</div>
-        <div class="color">color</div>
-      </div>
-
-      <div class="img-container"><img src="{{item.tempImage}}" alt="photo"></div>
-
-      <div class="bottom">
-        <div class="name">{{ item.name }}</div>
-        <div class="price">{{ item.price | currency:"EUR" }}</div>
-      </div>
-    </div>
-  </drag-scroll>
-</div>
-
-      <div class="catalog-reverse">
-        <div class="header-reverse">
-          <p>women<p>
-        </div>
-      </div>
-      <div class="items-btn-rev">
-        <button (click)="moveLeftRev()"><img src="../assets/fa-chevron-left.png" alt="#"></button>
-        <button (click)="moveRightRev()"><img src="../assets/fa-chevron-right.png" alt="#"></button>
-      </div>
-
-      <div class="items">
-        <drag-scroll #navWomen>
-          <div class="item"*ngFor="let item of sliderItemsWomen" drag-scroll-item >
-            <div class="top">
-              <div class="size">size</div>
-              <div class="color">color</div>
-            </div>
-
-            <div class="img-container"><img src="{{item.tempImage}}" alt="photo"></div>
-
-            <div class="bottom">
-              <div class="name">{{ item.name }}</div>
-              <div class="price">{{ item.price | currency:"EUR" }}</div>
-            </div>
-          </div>
-        </drag-scroll>
-      </div>
-
-    </div>
 <div class="about">
     <div class="about-div">
         <div class="title">

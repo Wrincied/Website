@@ -1,6 +1,6 @@
 .hero{
   color: #ffffff;
-  background-image: url('../assets/bg.png');
+  background-image: url('../../../assets/bg.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,128 +91,15 @@
 
   }
 }
-.catalog{
-padding:30px 0;
-margin: 0 100px;
-.items-btn{
-  padding-bottom:30px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  vertical-align: middle;
-  button{
-    padding: 10px 10px;
-    background-color:#ffffff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-}
-.items-btn-rev{
-  padding-bottom:70px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  vertical-align: middle;
-button{
-  padding: 0px 10px;
-  background-color:#ffffff;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-}
-.header{
-  display: flex;
-  align-items: center;
-  padding:30px 0;
-  p{
-    font-size: 20px;
-    text-transform: uppercase;
-    font-family: 'Quicksand Bold';
-    padding-right: 50px;
-  }
-    &::after{
-      content: "";
-      width: 100%;
-      height:2px;
-      background-color: #cccccc;
-      display: block;
-    }
-
-    }
-
-  .catalog-reverse{
-    background-color: white;
+  .catalog{
     padding:30px 0;
-    .header-reverse{
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      padding:30px 0;
-      p{
-        padding: 0;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-family: 'Quicksand Bold';
-        padding-left: 50px;
-      }
-        &::after{
-          content: "";
-          width: 100%;
-          height:2px;
-          background-color: #cccccc;
-          display: block;
-        }
-
-      }
-  }
-  .items{
-    display: flex;
-    .item{
-      min-width: 320px;
-      height: 100%;
-      max-height:378px;
-      background-color: #f5f6f7;
-      border: 6px solid transparent;
-      border-radius: 3px;
-      text-transform: uppercase;
-      font-weight: 400;
-      font-family: 'Quicksand Bold';
-      margin: 0 25px 0 0;
-
-      &:hover{
-        border: 6px solid #aa9b77;
-      }
-      .top,.bottom{
-        display: flex;
-        justify-content: space-between;
-        padding: 18px;
-      }
-      .name{
-        color:#aa9b77;
-      }
-      .img-container{
-        padding: 0 20px;
-        height: 270px;
-        display: flex;
-        align-items: center;
-        img{
-          display: block;
-          height: auto;
-          margin:auto;
-          max-width:100%;
-          max-height: 100%;
-
-        }
-
-
-      }
-
+    margin: 0 100px;
+    app-slider{
+      font-family: 'Quicksand Book';
+      font-weight: 400; 
     }
-  }
+    }
 
-}
 .about{
   background-color: #aa9b77;
   width: 100%;
@@ -252,3 +139,5 @@ button{
       }
   }
 }
+
+

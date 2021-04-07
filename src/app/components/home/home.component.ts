@@ -1,34 +1,32 @@
-// import { Component, OnInit, HomeComponent } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CatalogService } from '../../services/catalog/catalog.service';
 
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+  menSlider = [];
+  womenSlider = [];
 
-// @Component({
-//   selector: 'app-home',
-//   templateUrl: './home.component.html',
-//   styleUrls: ['./home.component.scss']
-// })
-// // export class HomeComponent implements OnInit {
+  isManVisible = true;
+  isWomenVisible = true;
 
-// //   export class HomeComponent implements OnInit {
-// //     menSlides = [];
-// //     womenSlides = [];
+  constructor(private catalogService: CatalogService ) {}
 
-// //     isManVisible = true;
-// //     isWomenVisible = true;
+  ngOnInit() {
+    this.catalogService.getMenSlides().subscribe((data) => {
+      this.menSlider = data;
+    });
 
-// //     constructor(private catalogService: ) {}
+    this.catalogService.getWomenSlides().subscribe((data) => {
+      this.womenSlider = data;
+    })
+  }
 
-// //     ngOnInit() {
-// //       this.catalogService.getMenSlides().subscribe((data) => {
-// //         this.menSlides = data;
-// //       });
-
-// //       this.catalogService.getWomenSlides().subscribe((data) => {
-// //         this.womenSlides = data;
-// //       })
-// //     }
-
-// //     seeAllProduct() {
-// //       this.isManVisible = true;
-// //       this.isWomenVisible = true;
-// //     }
-// //   }
+  seeAllProduct() {
+    this.isManVisible = true;
+    this.isWomenVisible = true;
+  }
+}

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DragScrollModule  } from 'ngx-drag-scroll';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-// import { HomeComponent } from './components/home/home.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module'
 // import { CartComponent } from './components/cart/cart.component';
 
 
@@ -16,15 +16,19 @@ import { HeaderComponent } from './components/header/header.component';
   declarations: [
     AppComponent,
     ItemDetailComponent,
-    FooterComponent,
-    HeaderComponent,
-    // HomeComponent,
+    SliderComponent,
+    HomeComponent,
     // CartComponent,
+
+
   ],
   imports: [
+    RouterModule,
     BrowserModule,
-    AppRoutingModule,
-    DragScrollModule
+    DragScrollModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

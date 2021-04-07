@@ -9,7 +9,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module'
-// import { CartComponent } from './components/cart/cart.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module'
     ItemDetailComponent,
     SliderComponent,
     HomeComponent,
-    // CartComponent,
+    CartComponent,
 
 
   ],

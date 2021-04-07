@@ -1,0 +1,31 @@
+[{
+  "name": "Jacket",
+  "price" : 60,
+  "tempImage" : "../assets/t-shirt.png"
+},
+{
+  "name": "Trekking shoes",
+  "price" : 30,
+  "tempImage" : "../assets/Jacket.png"
+},
+{
+  "name": "T-shirt",
+  "price" : 60,
+  "tempImage" : "../assets/Shoes.png"
+},
+
+{
+  "name": "Trainers",
+  "price" : 50,
+  "tempImage" : "../assets/Pants.png"
+},
+{
+  "name": "Trainers",
+  "price" : 50,
+  "tempImage" : "../assets/Pants.png"
+},
+{
+  "name": "Trainers",
+  "price" : 50,
+  "tempImage" : "../assets/Pants.png"
+}]

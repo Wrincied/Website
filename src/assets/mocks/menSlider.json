@@ -1,0 +1,32 @@
+[
+  {
+    "name": "T-shirt",
+    "price" : 5,
+    "tempImage" : "../assets/t-shirt.png"
+  },
+  {
+    "name": "Pants Forclaz",
+    "price" : 30,
+    "tempImage" : "../assets/Pants.png"
+  },
+  {
+    "name": "Backpack",
+    "price" : 60,
+    "tempImage" : "../assets/Backpack.png"
+  },
+  {
+    "name": "Trainers",
+    "price" : 50,
+    "tempImage" : "../assets/Jacket.png"
+  },
+  {
+    "name": "Trainers",
+    "price" : 50,
+    "tempImage" : "../assets/Shoes.png"
+  },
+  {
+    "name": "Trainers",
+    "price" : 50,
+    "tempImage" : "../assets/Pants.png"
+  }
+]
